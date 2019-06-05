@@ -26,12 +26,6 @@ def analyse():
 
     blob = TextBlob(text)
     blob = blob.translate(to="en")
-    blob.tags           # [('The', 'DT'), ('titular', 'JJ'),
-                        #  ('threat', 'NN'), ('of', 'IN'), ...]
-
-    blob.noun_phrases   # WordList(['titular threat', 'blob',
-                        #            'ultimate movie monster',
-                        #            'amoeba-like mass', ...])
 
     for sentence in blob.sentences:
         polarity = polarity + sentence.sentiment.polarity
